@@ -304,7 +304,7 @@ void EVE_start_dma_transfer(void)
 
 #if defined (WIZIOPICO) || (PICOPI)
 /* note: set in platformio.ini by "build_flags = -D WIZIOPICO" */
-#include "EVE_target.hpp
+#include "EVE_target.hpp"
 #include "EVE_commands.hpp"
 
 void EVE_init_spi(void)
