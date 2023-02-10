@@ -48,8 +48,8 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 #if defined (ARDUINO_METRO_M4)
 
-#include "EVE_target.h"
-#include "EVE_commands.h"
+#include "EVE_target.hpp"
+#include "EVE_commands.hpp"
 
 #include <Adafruit_ZeroDMA.h>
 
@@ -104,8 +104,8 @@ void EVE_start_dma_transfer(void)
 
 #if defined (ARDUINO_NUCLEO_F446RE)
 
-#include "EVE_target.h"
-#include "EVE_commands.h"
+#include "EVE_target.hpp"
+#include "EVE_commands.hpp"
 
 SPI_HandleTypeDef eve_spi_handle;
 
@@ -196,7 +196,7 @@ void EVE_start_dma_transfer(void)
 #if defined (ESP32)
 
 /* note: this is using the ESP-IDF driver as the Arduino class and driver does not allow DMA for SPI */
-#include "EVE_target.h"
+#include "EVE_target.hpp"
 
 spi_device_handle_t EVE_spi_device = {0};
 spi_device_handle_t EVE_spi_device_simple = {0};
@@ -267,7 +267,7 @@ void EVE_start_dma_transfer(void)
 
 #if defined (ARDUINO_TEENSY41) || (ARDUINO_TEENSY35)
 
-#include "EVE_target.h"
+#include "EVE_target.hpp"
 #include <SPI.h>
 
 #if defined (EVE_DMA)
@@ -304,8 +304,8 @@ void EVE_start_dma_transfer(void)
 
 #if defined (WIZIOPICO) || (PICOPI)
 /* note: set in platformio.ini by "build_flags = -D WIZIOPICO" */
-#include "EVE_target.h"
-#include "EVE_commands.h"
+#include "EVE_target.hpp
+#include "EVE_commands.hpp"
 
 void EVE_init_spi(void)
 {
